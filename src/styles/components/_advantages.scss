@@ -1,0 +1,136 @@
+.advantages {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media (max-width:650px) {
+    padding-bottom: 30px;
+  }
+ &__container {
+
+ }
+ & .section__info-title {
+  @media (max-width:500px) {
+    max-width: 200px;
+  }
+ }
+ &__slide {
+  display: flex;
+  @media (max-width:1130px) {
+    flex-direction: column;
+    .col-4 {
+      width: 50%;
+    }
+  }
+  @media (max-width:1030px) {
+    .col-4 {
+      width: 70%;
+    }
+  }
+  @media (max-width:650px) {
+    .col-4 {
+      width: 100%;
+    }
+  }
+ }
+ &__swiper {
+  padding-top: 100px;
+  // padding-bottom: 100px;
+  @media (max-width:650px) {
+    padding-bottom: 0px;
+    padding-top: 50px;
+  }
+ }
+ &__title {
+  color: white;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition-delay: 0.2s;
+  @media (max-width:1280px) {
+    font-size: 60px;
+  }
+  @media (max-width:1030px) {
+    font-size: 52px;
+  }
+  @media (max-width:650px) {
+    font-size: 24px;
+  }
+ }
+ &__description {
+  padding-top: 25px;
+  color: var(--color-light);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 130%;
+  transition-delay: 0.7s;
+  @media (max-width:650px) {
+    font-size: 16px;
+  }
+ }
+}
+.advantages .swiper-slide {
+ opacity: 0 !important;
+ transition: opacity 0.4s;
+
+ &-active {
+  opacity: 1 !important;
+ }
+}
+.advantages .swiper-slide .advantages__title {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 0.5s ease 0s
+ }
+
+.advantages .swiper-slide-active .advantages__title {
+  transform: none;
+  opacity: 1;
+}
+
+.advantages .swiper-slide .advantages__description {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: transform 0.7s ease 0s
+ }
+.swiper-pagination {
+ padding-bottom: 10px;
+ color: rgba(243, 245, 249, 0.3);
+ font-family: "Aeroport";
+ font-size: 20px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 130%;
+ display: flex;
+ gap: 14px;
+ justify-content: flex-end;
+}
+.swiper-pagination-current {
+ color: rgba(243, 245, 249, 1);
+}
+.advantages .swiper-slide-active .advantages__description {
+  transform: none;
+  opacity: 1;
+}
+.advantages-swiper {
+ &__nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 5px;
+  padding-top: 50px;
+  @media (max-width:650px) {
+    padding-top: 30px;
+  }
+ }
+}
+.advantages .swiper-button-disabled svg{
+ opacity: 0.3;
+ transition: all .3s ease 0s;
+}
+.advantages__swiper-title {
+  @media (max-width:650px) {
+    width: 100%;
+  }
+}

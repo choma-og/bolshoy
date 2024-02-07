@@ -1,0 +1,42 @@
+// базовые подключения
+@import "./settings";
+@import "./mixins";
+@import "./fonts";
+@import "./vars";
+
+// компоненты страницы
+
+// подключения компонентов страницы (большие компоненты)
+@import "./components/header";
+@import "./components/hero";
+@import "./components/detail-hero";
+@import "./components/detail-descr";
+@import "./components/range";
+@import "./components/about";
+@import "./components/regions";
+@import "./components/news";
+@import "./components/contacts";
+@import "./components/advantages";
+@import "./components/page-news";
+@import "./components/_news-detail";
+@import "./components/vacancy-hero";
+@import "./components/vacancy-learning";
+@import "./components/vacancy-slider";
+@import "./components/vacancy-accordion";
+@import "./components/vacancy-form";
+@import "./components/about-detailHero";
+@import "./components/about-people";
+@import "./components/clients";
+@import "./components/contacts-form";
+@import "./components/contacts-info";
+@import "./components/brands";
+@import "./components/detail-technique";
+@import "./components/detail-slider";
+@import "./components/modal-menu";
+@import "./components/suces";
+@import "./components/modal-main";
+@import "./components/modal-vacancy";
+@import "./components/footer";
+
+// подключения компонентов страницы (маленькие компоненты)
+//detail

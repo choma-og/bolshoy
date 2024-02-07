@@ -1,0 +1,67 @@
+<section class="vacancy-form section">
+ <div class="vacancy-form__container">
+  <h3 class="vacancy-form__title">Не нашли подходящую вакансию?</h3>
+  <div class="vacancy-form__content col-12 row">
+   <div class="vacancy-form__descr col-5">
+    <p class="vacancy-form__info">Отправьте резюме и&nbsp;мы&nbsp;обязательно рассмотрим вашу кандидатуру</p>
+    <span>Вакансии на 
+     <a class="vacancy-form__hh" href="#">hh.ru 
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+       <path d="M7.28833 6.00692L6.86594 1.17892M6.86594 1.17892L2.03793 1.60131M6.86594 1.17892L0.99177 8.17937"
+        stroke="#0265AB" stroke-linecap="square" stroke-linejoin="bevel" />
+      </svg>
+     </a>
+    </span>
+   </div>
+   <div class="col-1"></div>
+   <div class="vacancy-form__form form-vacancy col-6">
+    <form action="/local/ajax/join.php" method="post" class="js-form contacts__form">
+      <div class="contacts__wrapper">
+
+        <div class="contacts__input wrapper__name">
+          <input name="user_name" class="contacts__name" type="text" id="contacts-name" data-type="text" placeholder=" ">
+          <label class="contacts__label" for="">ФИО</label>
+          <div class="validate__form-error validate__form-error--name js-error js-error-name">
+            <span>Перепроверьте корректность имени</span>
+          </div>
+        </div>
+
+        <div class="contacts__input wrapper__phone">
+          <input data-mask="phone" name="user_phone" class="contacts__tel" data-type="phone" type="text" id="contacts-phone"
+            inputmode="text" placeholder=" ">
+          <label class="contacts__label" for="">Телефон</label>
+          <div class="validate__form-error validate__form-error--phone js-error js-error-phone">
+            <span>Заполните телефон, мы позвоним на него</span>
+          </div>
+        </div>
+
+        <div class="contacts__input wrapper__email">
+          <input data-mask="email" name="user_email" class="contacts__tel" data-type="email" type="text" id="contacts-email"
+            inputmode="text" placeholder=" ">
+          <label class="contacts__label" for="">Почта</label>
+          <div class="validate__form-error validate__form-error--email js-error js-error-email">
+            <span>Перепроверьте корректность email</span>
+          </div>
+        </div>
+
+        <div class="contacts__input wrapper__text">
+          <textarea name="user_text" class="contacts__text" type="text" data-type="novalidate" placeholder=""></textarea>
+          <label class="contacts__label" for="">Сопроводительное письмо и ссылка на резюме</label>
+          <div class="validate__form-error validate__form-error--name js-error js-error-name">
+            <span>Перепроверьте корректность письма</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="contacts__btns">
+        <button class="js-form-submit btn btn-reset btn-primary" type="submit">Отправить</button>
+        <p>Нажимая &laquo;Отправить&raquo;, вы&nbsp;даете согласие на&nbsp;обработку своих <a href="#">персональных
+            данных</a>
+        </p>
+      </div>
+    
+    </form>
+   </div>
+  </div>
+ </div>
+</section>

@@ -1,0 +1,133 @@
+.detail-technique {
+ @media (max-width:650px) {
+  padding-bottom: 50px;
+ }
+ &__container {
+
+ }
+ & .owl-nav {
+  @media (max-width:1030px) {
+   position: absolute;
+    top: -85px;
+    left: -7px;
+  }
+  @media (max-width:650px) {
+   position: absolute;
+    top: -70px;
+    left: -7px;
+  }
+
+ }
+ &__title {
+  margin-bottom: 120px;
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: initial;
+  color: white;
+  @media (max-width:1030px) {
+   font-size: 52px;
+  }
+  @media (max-width:650px) {
+   font-size: 26px;
+   margin-bottom: 100px;
+  }
+ }
+ &__content {
+  .col-1 {
+   @media (max-width:1030px) {
+    display: none;
+   }
+  }
+  @media (max-width:1030px) {
+  & .technique-carousel.owl-carousel {
+    width: 100% !important;
+   }
+  }
+ }
+ &__descr {
+ color: rgb(243, 245, 249);
+ font-size: 18px;
+ font-weight: 300;
+ line-height: 25px;
+ opacity: 0.8;
+ @media (max-width:650px) {
+  font-size: 16px;
+ }
+ }
+ &__caption {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 38px;
+  margin-bottom: 18px;
+  @media (max-width:650px) {
+   font-size: 22px;
+   margin-bottom: 10px;
+  }
+ }
+ &__info {
+
+ }
+ &__content {
+
+ }
+ &__image {
+  margin-bottom: 30px;
+  @media (max-width:650px) {
+   margin-bottom: 15px;
+  }
+ }
+ &__image {
+  position: relative;
+  height: 0;
+  padding-top: 98%;
+  @media (max-width:650px) {
+    padding-top: 67%;
+  }
+  img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   object-fit: cover;
+   object-position: center;
+   width: 100%;
+   height: 100%;
+  }
+ }
+ & .owl-nav .disabled {
+  opacity: 0.3;
+ }
+}
+.technique-carousel.owl-carousel {
+ width: 83.33%;
+}
+.technique-carousel.owl-carousel .owl-prev {
+ position: absolute;
+ transform: translate(0px, -150%);
+ left: -116px;
+ top: 50%;
+ @media (max-width:1030px) {
+   transform: translate(0px, 0%);
+  //  right: 0;
+  //  left: 0;
+  left: 0;
+  }
+ @media (max-width:650px) {
+   transform: translate(0px, 0%);
+
+  }
+ }
+.technique-carousel.owl-carousel .owl-next {
+ position: absolute;
+ transform: translate(0px, -150%);
+ left: inherit;
+ right: -116px;
+ top: 50%;
+ @media (max-width:1030px) {
+  transform: translate(0px, 0%);
+  right: initial;
+  left: 65px;
+ }
+ @media (max-width:650px) {
+  left: 50px;
+ }
+ }

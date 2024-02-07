@@ -1,0 +1,37 @@
+.brands {
+ padding-top: 50px;
+ &__container {
+
+ }
+ &__title {
+  color: white;
+  margin-bottom: 80px;
+  @media (max-width:650px) {
+   margin-bottom: 30px;
+  }
+ }
+ &__item {
+  width: 217px;
+  @media (max-width:650px) {
+   width: 150px;
+  }
+  img {
+   width: 217px;
+  @media (max-width:650px) {
+    width: 150px;
+   }
+  }
+ }
+ &__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 217px);
+  column-gap: 56px;
+  @media (max-width:650px) {
+   grid-template-columns: repeat(auto-fill, 150px);
+  }
+  @media (max-width:400px) {
+   column-gap: 20px;
+  }
+ }
+ 
+}

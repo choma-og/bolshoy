@@ -1,0 +1,138 @@
+.range {
+ padding-bottom: 0px;
+ &__container {
+
+ }
+ &__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 110px;
+  min-height: 580px;
+  // @media (max-width:1435px) {
+  //  gap: 60px;
+  // }
+    @media (max-width:1150px) {
+     gap: 30px;
+     min-height: 380px;
+    }
+    @media (max-width:950px) {
+     gap: 0;
+     min-height: 580px;
+    }
+    @media (max-width:600px) {
+     min-height: 420px;
+    }
+ }
+ &__item {
+
+ }
+ &__info {
+  margin-bottom: 100px;
+  @media (max-width:550px) {
+    margin-bottom: 50px;
+  }
+ }
+ &__link {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all .3s ease 0s;
+  @media (max-width:1150px) {
+    font-size: 16px;
+   }
+
+  &:hover {
+   color: var(--color-green-accent);
+   padding-left: 5px;
+  }
+ }
+ &__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 5;
+  @media (max-width:1150px) {
+   gap: 15px;
+  }
+ }
+ &__title {
+  position: relative;
+  z-index: 5;
+  color:  #FFF;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 2.08px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  position: relative;
+  @media (max-width:1240px) {
+   font-size: 32px;
+  }
+  @media (max-width:1150px) {
+   font-size: 26px;
+  }
+  @media (max-width:950px) {
+   font-size: 32px;
+  }
+  &::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   background-color: white;
+   height: 1px;
+   width: 100%
+  }
+ }
+ &__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media (max-width:950px) {
+   width: 450px !important;
+  }
+  @media (max-width:600px) {
+   width: 300px !important;
+  }
+  &:hover .range__img img{
+    filter: brightness(1);
+  }
+ }
+ &__img {
+  // opacity: 0;
+  // visibility: hidden;
+  
+  position: absolute;
+  top: 36px;
+  left: 36px;
+  z-index: 1;
+
+  // @media (max-width:950px) {
+  //  opacity: 1;
+  //  visibility: visible;
+  // }
+ }
+ &__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: filter .3s ease 0s;
+  filter: brightness(.8);
+  @media (max-width:968px) {
+    filter: brightness(1);
+  }
+ }
+}
+// .range__link:hover+.range__img .range__image {
+//  filter: brightness(.1);
+// }
+// .range__opacity {
+//  opacity: 0.5;
+// }

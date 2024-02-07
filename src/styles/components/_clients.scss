@@ -1,0 +1,41 @@
+.clients {
+ @media (max-width:650px) {
+  padding-top: 0px;
+ }
+ background-color: var(--color-dark);
+ &__container {
+
+ }
+ &__title {
+  margin-bottom: 40px;
+  color: var(--color-white);
+  @media (max-width:650px) {
+   margin-bottom: 30px;
+  }
+ }
+ &__descr {
+  color: var(--color-white);
+  margin-bottom: 100px;
+  @media (max-width:650px) {
+   font-size: 16px;
+   width: 100%;
+   margin-bottom: 50px;
+  }
+ }
+ & .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+ }
+ & .swiper-slide {
+  @media (max-width:650px) {
+   width: 110px !important;
+  }
+  }
+ & .swiper-slide img {
+  // max-width: 100%;
+  @media (max-width:800px) {
+   max-width: none;
+   width: 110px;
+  }
+ }
+}

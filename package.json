@@ -1,0 +1,36 @@
+{
+  "name": "choma-vite",
+  "private": false,
+  "version": "0.0.0",
+  
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "last 2 years",
+    "> 1%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browserslist": "^4.21.7",
+    "postcss": "^8.4.24",
+    "postcss-scss": "^4.0.6",
+    "sass": "^1.63.4",
+    "vite": "^4.3.9",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-squoosh": "^1.1.7",
+    "vite-plugin-zip-pack": "^1.0.5"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^1.6.0",
+    "gsap": "^3.12.5",
+    "imask": "^7.1.3",
+    "jquery": "^3.7.1",
+    "owl.carousel": "^2.3.4",
+    "swiper": "^8.4.7"
+  }
+}
