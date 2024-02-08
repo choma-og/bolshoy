@@ -18703,6 +18703,19 @@ const openNav = () => {
   }
 };
 openNav();
+new Swiper(".hero__swiper", {
+  effect: "fade",
+  loop: true,
+  modules: [Navigation, Pagination, EffectFade, Autoplay],
+  autoplay: {
+    delay: 5e3,
+    disableOnInteraction: false
+  },
+  navigation: {
+    nextEl: ".swiper-next-button",
+    prevEl: ".swiper-prev-button"
+  }
+});
 var swiper = new Swiper(".advantages-swiper", {
   effect: "fade",
   modules: [Navigation, Pagination, EffectFade, Autoplay],
@@ -19068,25 +19081,28 @@ forms.forEach((form) => {
     });
   }
 });
-const tabs = document.querySelectorAll(".contacts-map__item");
-const contents = document.querySelectorAll(".contacts-map__content");
-tabs.forEach((tab, index2) => {
+const tabsItem = document.querySelectorAll(".contacts-map__item");
+const contactsMap = document.querySelectorAll(".contacts-map__content");
+const contactsInfo = document.querySelectorAll(".contacts-info__item");
+tabsItem.forEach((tab, index2) => {
   tab.addEventListener("click", () => {
-    tabs.forEach((tab2) => tab2.classList.remove("active"));
+    tabsItem.forEach((tab2) => tab2.classList.remove("active"));
     tab.classList.add("active");
-    contents.forEach((c) => c.classList.remove("active"));
-    contents[index2].classList.add("active");
+    contactsMap.forEach((c) => c.classList.remove("active"));
+    contactsMap[index2].classList.add("active");
+    contactsInfo.forEach((c) => c.classList.remove("active"));
+    contactsInfo[index2].classList.add("active");
   });
 });
-tabs[0].click();
+tabsItem[0].click();
 document.addEventListener("DOMContentLoaded", function() {
   if (ymaps) {
     ymaps.ready(initializeMaps);
   }
 });
 let centerOffice = [53.36863907494733, 83.76431772883599];
-let centerStore = [55.004994486746305, 82.95321743254078];
-let centerService = [55.004994486746305, 82.95321743254078];
+let centerStore = [53.3448532390569, 83.70437349462883];
+let centerService = [53.33024982926081, 83.61550272883603];
 function initializeMaps() {
   let mapOffice = new ymaps.Map("map-office", {
     center: centerOffice,
@@ -19094,7 +19110,7 @@ function initializeMaps() {
   });
   let mapStore = new ymaps.Map("map-store", {
     center: centerStore,
-    zoom: 16
+    zoom: 11.6
   });
   let mapService = new ymaps.Map("map-service", {
     center: centerService,
@@ -19106,13 +19122,19 @@ function initializeMaps() {
     iconImageSize: [37, 37],
     iconImageOffset: [-20, -30]
   });
-  let placemarkStore = new ymaps.Placemark([55.004994486746305, 82.95321743254078], {}, {
+  let placemarkStore1 = new ymaps.Placemark([53.36863907494733, 83.76431772883599], {}, {
     iconLayout: "default#image",
     iconImageHref: "map.svg",
     iconImageSize: [37, 37],
     iconImageOffset: [-20, -20]
   });
-  let placemarkService = new ymaps.Placemark([55.004994486746305, 82.95321743254078], {}, {
+  let placemarkStore2 = new ymaps.Placemark([53.322682342606036, 83.63762995767203], {}, {
+    iconLayout: "default#image",
+    iconImageHref: "map.svg",
+    iconImageSize: [37, 37],
+    iconImageOffset: [-20, -20]
+  });
+  let placemarkService = new ymaps.Placemark([53.33024982926081, 83.61550272883603], {}, {
     iconLayout: "default#image",
     iconImageHref: "map.svg",
     iconImageSize: [37, 37],
@@ -19141,5 +19163,6 @@ function initializeMaps() {
   });
   mapService.geoObjects.add(placemarkService);
   mapOffice.geoObjects.add(placemarkOffice);
-  mapStore.geoObjects.add(placemarkStore);
+  mapStore.geoObjects.add(placemarkStore1);
+  mapStore.geoObjects.add(placemarkStore2);
 }
